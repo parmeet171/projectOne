@@ -1,38 +1,325 @@
-.App {
+/* .container {
+  margin: 0 5rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+} */
+* {
+  scroll-behavior: smooth;
+}
+p {
+  color: #898989;
+  font-family: "Poppins";
+  font-size: 15px;
+  font-weight: 400;
+  text-decoration: none;
+}
+.flex-center {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/* Navbar  */
+
+.navbar {
+  padding: 5px 20px;
+}
+
+/* heading */
+.heading {
+  height: 41vh;
+  width: 100%;
+  z-index: 1;
+  background: linear-gradient(
+    -45deg,
+    rgb(64, 93, 230),
+    rgb(88, 81, 219),
+    rgb(131, 58, 180),
+    rgb(193, 53, 132),
+    rgb(225, 48, 108),
+    rgb(253, 29, 29),
+    rgb(245, 96, 64),
+    rgb(247, 119, 55),
+    rgb(252, 175, 69),
+    rgb(255, 205, 75),
+    rgb(197, 255, 56),
+    rgb(81, 255, 0)
+  );
+  background-size: 300% 300%;
+  text-align: center;
+  animation: animate 5s ease infinite;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.heading p {
+  color: #fff;
+  margin-bottom: 1.6em;
+  font-size: 15px;
+  font-weight: 200;
+}
+.heading h1 {
+  font-family: "Poppins", sans-serif;
+  font-size: 60px;
+  font-weight: 600;
+}
+
+@keyframes animate {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
+}
+
+/* buttons */
+.buttons {
+  text-align: center;
+  margin-top: 7px;
+}
+.buttons .buttons_container {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 2rem 0rem;
+}
+.main_btn {
+  background-color: #fff;
+  color: #2f80edba;
+  padding: 15px 45px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  border-radius: 7px;
+  box-shadow: 0px 0px 10px 0px rgb(197, 194, 194);
+  font-size: 19px;
+  font-weight: 900;
+  z-index: 1;
+  margin: 0 2rem 1.5rem 2rem;
+}
+.main_btn::before {
+  border-radius: 7px;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  background-color: #0799fa;
+  transition: transform 100ms ease-out;
+  transform: scaleX(0);
+  transform-origin: right;
+}
+.main_btn:hover::before,
+.main_btn:focus::before {
+  transform: scaleX(1);
+}
+.main_btn:hover {
+  color: #fff;
+  transform: 1s;
+}
+
+/* Accordion */
+
+.accordion_main_title::before {
+  content: "B. COM";
+  position: absolute;
+  font-size: 80px;
+  font-weight: 900;
+  opacity: 0.1;
+  top: 0;
+  bottom: 0;
+  left: 15%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+}
+.accordion_main_title {
+  position: relative;
+  margin: 1rem 0 2rem 0;
+}
+
+.accordion_left_section {
+  width: 100%;
+}
+
+.btn_accordion_container {
+  display: flex;
+  gap: 50px;
+}
+.accordion_left_section {
+  flex: auto;
+}
+.group_button {
+  background-color: #eee;
+  border: none;
+  color: #646464;
+  font-weight: 700;
+  padding: 15px 20px;
+  width: 150px !important;
+}
+.group_button:hover {
+  color: #424242;
+  background-color: #eee !important;
+}
+.horizontal_buttons {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.accordionn {
+  width: 60rem;
+}
+
+.big_container {
+  margin-top: 50px;
+}
+.accordion-item {
+  border: none;
+  border-radius: none !important;
+  margin-bottom: 3px !important;
+}
+.accordion-button {
+  background-color: #eee !important;
+  box-shadow: none !important;
+  color: black !important;
+  border-radius: 0 !important;
+}
+.accordion-body {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.bcom_heading_two {
+  margin-top: 40px;
+}
+.bcom_heading_two h6 {
+  background-color: yellow;
+  padding: 10px 20px;
+  color: red;
+  font-weight: 600;
+}
+.bcom_heading_two p {
+  font-size: 12px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* pdfpdfContainer */
+.PdfContainer {
+  margin-top: 50px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.pdfContainer_buttons {
+  margin-top: 20px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+}
+.pdfContainer_buttons a {
+  text-decoration: none;
+  color: #646464;
+  font-weight: 600;
+  background-color: #eee;
+  padding: 20px 20px;
+}
+.pdfContainer_content {
+  background-color: #eee;
+  width: 70rem;
+  padding: 50px;
 }
 
-.App-link {
-  color: #61dafb;
+.visible {
+  display: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media only screen and (max-width: 1500px) {
+  .accordionn {
+    width: 50rem;
   }
-  to {
-    transform: rotate(360deg);
+}
+@media only screen and (max-width: 1200px) {
+  .accordionn {
+    width: 40rem;
   }
+  .pdfContainer_content {
+    width: 55rem;
+    padding: 50px;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .accordionn {
+    width: 40rem;
+  }
+  .group_button {
+    padding: 15px 10px;
+    width: 120px !important;
+  }
+  .btn_accordion_container {
+    gap: 20px;
+  }
+  .big_container {
+    margin-top: 10px;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .hidden {
+    display: none;
+  }
+  .show {
+    display: contents;
+  }
+  .pdfContainer_content {
+    width: 40rem;
+    padding: 50px 10px;
+  }
+  .btn_accordion_container {
+    flex-direction: column;
+  }
+  .pdfContainer_buttons a {
+    padding: 20px 10px;
+    flex-wrap: wrap;
+  }
+  .pdfContainer_buttons {
+    flex-wrap: wrap;
+    margin: 0 50px;
+  }
+  .PdfContainer {
+    margin-top: 50px;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .accordionn {
+    width: 30rem;
+  }
+  .pdfContainer_content {
+    width: 30rem;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .pdfContainer_content {
+    width: 20rem;
+  }
+  .accordionn {
+    width: 20rem;
+  }
+}
+
+/* footer */
+footer {
+  height: 50vh;
 }
